@@ -14,7 +14,7 @@
   --focus-ring:    #f4f4f2;
 
   /* Layout */
-  --content-max:   720px;
+  --content-max:   820px;
   --header-h:      56px;
 }
 
@@ -132,11 +132,10 @@ body {
 .hero__heading {
   font-family: var(--font-sans), system-ui, sans-serif;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1.15;
   letter-spacing: -0.015em;
   margin: 0 0 24px;
-  max-width: 16ch;
 }
 .hero__lede {
   font-family: var(--font-serif), Georgia, "Times New Roman", serif;
@@ -148,7 +147,7 @@ body {
 .hero__signature {
   font-family: var(--font-serif), Georgia, "Times New Roman", serif;
   font-style: italic;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
   color: var(--text-soft);
   margin: 0;
@@ -156,8 +155,7 @@ body {
 @media (min-width: 768px) {
   .hero { padding: 96px 0 56px; }
   .hero__heading { font-size: 34px; }
-  .hero__lede { font-size: 18px; }
-  .hero__signature { font-size: 17px; }
+  .hero__signature { font-size: 18px; }
 }
 
 /* ================================================================
@@ -306,13 +304,6 @@ body {
 .episode-page__audio audio {
   width: 100%;
   display: block;
-}
-
-.episode-page__image { margin: 0 0 56px; }
-.episode-page__image img {
-  border-radius: 4px;
-  width: 100%;
-  max-width: 480px;
 }
 
 .episode-page__transcript-heading {

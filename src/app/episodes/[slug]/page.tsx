@@ -53,13 +53,6 @@ export default async function EpisodePage({ params }: { params: Params }) {
 
       <AudioPlayer src={episode.audioUrl} />
 
-      {episode.imageUrl && (
-        <div className="episode-page__image">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={episode.imageUrl} alt={episode.title} loading="lazy" />
-        </div>
-      )}
-
       <h2 className="episode-page__transcript-heading">Transcript</h2>
       <div
         className="transcript-body"

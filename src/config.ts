@@ -37,11 +37,11 @@ export const SITE = {
    * Paste your real URLs in the empty slots when you have them.
    */
   socials: {
-    spotify:       "",  // ← Spotify show URL
-    applePodcasts: "",  // ← Apple Podcasts show URL
-    youtube:       "",  // ← YouTube channel/playlist URL
-    facebook:      "",  // ← Facebook page URL
-    newsletter:    "https://relentlesspursuitofchrist.substack.com",
+    spotify:       "https://open.spotify.com/show/033vvp7uEgExsFooZbqMyl?si=0a87b08a81324c12",
+    applePodcasts: "https://podcasts.apple.com/us/podcast/relentlesspursuitofchrist/id1896901958",
+    youtube:       "https://www.youtube.com/channel/UCwRBq3tXqZzKercEqZwBfNw",
+    facebook:      "https://www.facebook.com/profile.php?id=61590709620800",
+    newsletter:    "https://substack.com/@relentlesspursuitofchrist",
   },
 
   /** Year shown in the footer copyright line. */
