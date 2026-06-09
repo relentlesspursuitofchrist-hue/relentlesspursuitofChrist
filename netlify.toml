@@ -1,0 +1,11 @@
+# Netlify build config for the RPOC podcast site.
+# Netlify auto-detects Next.js and uses the official runtime plugin.
+
+[build]
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

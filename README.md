@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Relentless Pursuit of Christ — Podcast Site
 
-## Getting Started
+The podcast website. Built with Next.js, deployed on Netlify, episodes pulled from Substack RSS.
 
-First, run the development server:
+---
+
+## The one file you probably want to edit
+
+**`src/config.ts`** — all the editable text and links live here:
+- Brand text (eyebrow, hero heading, lede, signature)
+- Newsletter URL
+- Social URLs (Spotify, Apple Podcasts, YouTube, Facebook)
+- Copyright year
+
+**Empty social URLs (`""`) hide their footer link automatically.** Paste the real URL between the quotes when you have it; the link appears on next build.
+
+## Where things live
+
+```
+src/
+  config.ts                      ← edit text/links here
+  app/
+    layout.tsx                   ← page shell (header + footer)
+    page.tsx                     ← homepage
+    episodes/page.tsx            ← all-episodes list
+    episodes/[slug]/page.tsx     ← individual episode page
+    globals.css                  ← all styling (colors, fonts, spacing)
+    icon.png                     ← favicon (copied from public/logo.png)
+  components/                    ← Header, Footer, EpisodeList, etc.
+  lib/feed.ts                    ← fetches + parses the RSS feed
+  lib/slug.ts                    ← title → URL slug
+public/logo.png                  ← the wordmark used in the header
+```
+
+## How new episodes appear on the site
+
+You don't need to do anything. The site fetches the Substack RSS feed every hour (Next.js ISR). Publish on Substack, wait up to ~60 minutes, refresh the live site — new episode shows up.
+
+If you want it immediately, redeploy on Netlify (Deploys → Trigger deploy).
+
+## Running it locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. The first time the page loads, you'll see a `[RPOC] Parsed RSS feed` log in your terminal — that's the parse-verification log, helpful for confirming the feed parsed correctly. You can remove it later from `src/lib/feed.ts`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploying to Netlify
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Create a GitHub repo and push this project to it (`git push -u origin main`).
+2. On netlify.com → Add new site → Import from Git → pick the repo.
+3. Netlify auto-detects Next.js and builds it. No manual config needed (the included `netlify.toml` is enough).
+4. Within a few minutes the live URL is up.
 
-## Learn More
+## Changing colors or fonts
 
-To learn more about Next.js, take a look at the following resources:
+All design tokens are at the top of `src/app/globals.css`:
+- `--bg` — page background color
+- `--text` — main text color
+- `--text-muted` — secondary text (dates, nav, meta)
+- `--text-soft` — italic signature line color
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Fonts are loaded in `src/app/layout.tsx` via `next/font/google`. To change them, swap `Archivo` (sans) or `Newsreader` (serif) for any other Google Font.
