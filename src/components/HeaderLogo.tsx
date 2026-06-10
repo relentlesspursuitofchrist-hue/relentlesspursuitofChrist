@@ -14,7 +14,7 @@ export function HeaderLogo({ fallback }: { fallback: string }) {
   }
   return (
     <img
-      src="/logo.png"
+      src="/logo-banner.png"
       alt={fallback}
       onError={() => setFailed(true)}
     />

@@ -90,10 +90,10 @@ body {
 .site-header__logo {
   display: inline-flex;
   align-items: center;
-  height: 70px;
+  height: 68px;
   line-height: 1;
 }
-.site-header__logo img { height: 55px; width: auto; }
+.site-header__logo img { height: 68px; width: auto; }
 .site-header__logo-fallback {
   font-family: var(--font-sans), system-ui, sans-serif;
   font-weight: 800;
