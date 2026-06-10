@@ -7,7 +7,7 @@ export function Header() {
 
   return (
     <header className="site-header">
-      <div className="site-header__inner">
+      <div className="container site-header__inner">
         <Link
           href="/"
           className="site-header__logo"

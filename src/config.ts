@@ -22,7 +22,7 @@ export const SITE = {
   showFullTitle: "Relentless Pursuit of Christ",
 
   /** Modest heading under the eyebrow on the homepage. */
-  heroHeading: "Becoming like Christ, recorded out loud.",
+  heroHeading: "A relentless pursuit of Christ, recorded.",
 
   /** Lede paragraph (serif) on the homepage. */
   heroLede:

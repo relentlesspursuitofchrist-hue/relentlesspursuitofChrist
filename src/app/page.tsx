@@ -10,7 +10,6 @@ export default async function HomePage() {
   return (
     <div className="container">
       <section className="hero">
-        <p className="hero__eyebrow">{SITE.showFullTitle}</p>
         <h1 className="hero__heading">{SITE.heroHeading}</h1>
         <p className="hero__signature">{SITE.heroSignature}</p>
       </section>

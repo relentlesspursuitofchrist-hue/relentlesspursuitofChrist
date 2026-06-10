@@ -78,14 +78,14 @@ body {
   backdrop-filter: saturate(140%) blur(8px);
   border-bottom: 1px solid var(--divider);
 }
+/* .site-header__inner shares max-width + padding with .container via the
+   `container` class on the inner div — guarantees the logo lines up with
+   the hero heading and episode list below. */
 .site-header__inner {
   height: var(--header-h);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding: 0 24px;
 }
 .site-header__logo {
   display: inline-flex;
@@ -111,7 +111,6 @@ body {
 }
 .site-header__nav a:hover { color: var(--text); }
 @media (min-width: 768px) {
-  .site-header__inner { padding: 0 32px; }
   .site-header__nav { gap: 28px; }
   .site-header__nav a { font-size: 15px; }
 }
@@ -119,16 +118,7 @@ body {
 /* ================================================================
    Hero (homepage)
    ================================================================ */
-.hero { padding: 64px 0 32px; }
-.hero__eyebrow {
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-weight: 600;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin: 0 0 24px;
-}
+.hero { padding: 40px 0 32px; }
 .hero__heading {
   font-family: var(--font-sans), system-ui, sans-serif;
   font-weight: 700;
@@ -153,7 +143,7 @@ body {
   margin: 0;
 }
 @media (min-width: 768px) {
-  .hero { padding: 96px 0 56px; }
+  .hero { padding: 56px 0 56px; }
   .hero__heading { font-size: 34px; }
   .hero__signature { font-size: 18px; }
 }
