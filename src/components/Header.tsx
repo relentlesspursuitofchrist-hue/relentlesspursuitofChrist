@@ -22,6 +22,9 @@ export function Header() {
               Newsletter
             </a>
           )}
+          <a href="https://the-forge-rpoc.netlify.app/" target="_blank" rel="noopener noreferrer">
+            The Forge
+          </a>
         </nav>
       </div>
     </header>
